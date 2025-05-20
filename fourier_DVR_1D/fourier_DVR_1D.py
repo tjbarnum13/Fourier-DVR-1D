@@ -133,7 +133,7 @@ class Domain_Fourier_DVR_1D(object):
         # solve
         eigvals_only = not calc_eigenstates
         result = scipy.linalg.eigh(H_four,
-                                   eigvals=eigvals,
+                                   subset_by_index=eigvals,
                                    eigvals_only=eigvals_only,
                                    overwrite_a=True)
         logging.debug('solve | done')
